@@ -1,0 +1,46 @@
+\usepackage[T1]{fontenc}
+
+% GEOMETRY
+\usepackage[top=2cm,bottom=2.5cm,left=3.5cm,right=3.5cm,footskip=2cm,marginparwidth=5cm]{geometry}
+
+% LINESPACING
+\renewcommand{\baselinestretch}{1.25} 
+\pagestyle{plain}
+
+% FONTS
+\usepackage{fontspec} 
+\setmainfont[Ligatures=TeX,BoldFont = STIX2Text-Bold.otf, ItalicFont = STIX2Text-Italic.otf, BoldItalicFont = STIX2Text-BoldItalic.otf]{STIX2Text-Regular.otf}
+\setmathfont{STIX2Math.otf}
+
+% LINE NUMBERING
+\usepackage{lineno}
+\linenumbers
+
+% FLUSH LEFT
+\usepackage{ragged2e}
+\setlength\RaggedRightParindent{\parindent} % default value of this parameter is `0pt`
+\RaggedRight
+
+% AUTHOR
+\usepackage{authblk} 
+\author[a]{Hans Kloss} 
+\affil[a]{Institute of Being, Dasein University in Neverland}
+
+% MAKETITLE
+\setlength{\affilsep}{0pt}
+\renewcommand\Affilfont{\itshape\small}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  {\huge\textbf{\@title}\par}
+
+  \@author
+\end{flushleft}\egroup
+}
+\let\AB@maketitle=\maketitle
+\def\maketitle{{\renewenvironment{tabular}[2][]{\begin{flushleft}}
+  {\end{flushleft}}
+  \AB@maketitle}}
+\makeatother
+

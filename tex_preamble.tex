@@ -1,0 +1,33 @@
+% GEOMETRY
+\usepackage[top=3cm,bottom=4.5cm,left=4cm,right=4cm,footskip=2cm,marginparwidth=5cm]{geometry}
+
+% LINESPACING
+\renewcommand{\baselinestretch}{1} 
+
+% FONTS
+\usepackage{fontspec} 
+\setmainfont[BoldFont = Lato-Bold.ttf, ItalicFont = Lato-Italic.ttf, BoldItalicFont = Lato-BoldItalic.ttf]{Lato-Regular.ttf}
+
+% AUTHOR
+\usepackage{authblk} 
+\author[a]{Hans Kloss} 
+\affil[a]{Institute of Being, Dasein University in Neverland} 
+
+% MAKETITLE
+\setlength{\affilsep}{0pt}
+\renewcommand\Affilfont{\itshape\small}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  {\huge\textbf{\@title}\par}
+
+  \@author
+\end{flushleft}\egroup
+}
+\let\AB@maketitle=\maketitle
+\def\maketitle{{\renewenvironment{tabular}[2][]{\begin{flushleft}}
+  {\end{flushleft}}
+  \AB@maketitle}}
+\makeatother
+
