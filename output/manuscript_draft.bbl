@@ -1,0 +1,20 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{DOI~\discretionary{}{}{}#1}\else
+  \providecommand{\doi}{DOI~\discretionary{}{}{}\begingroup
+  \urlstyle{rm}\Url}\fi
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Barrett and Simmons(2015)}]{barrett2015}
+Barrett L, Simmons W (2015) Interoceptive predictions in the brain. Nature
+  Reviews Neuroscience 16(7):419–429, \doi{10.1038/nrn3950}
+
+\bibitem[{Siegel and Silins(2015)}]{siegel2015}
+Siegel S, Silins N (2015) The epistemology of perception. In: Matthen M (ed)
+  Oxford Handbook of Philosophy of Perception, Oxford University Press, pp
+  1--48
+
+\end{thebibliography}

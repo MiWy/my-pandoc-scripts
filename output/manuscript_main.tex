@@ -1,0 +1,157 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  10pt,
+  a4paper,
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Another Example in the Wall},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% GEOMETRY
+\usepackage[top=3cm,bottom=4.5cm,left=4cm,right=4cm,footskip=2cm,marginparwidth=5cm]{geometry}
+
+% LINESPACING
+\renewcommand{\baselinestretch}{1} 
+
+% FONTS
+\usepackage{fontspec} 
+\setmainfont[BoldFont = Lato-Bold.ttf, ItalicFont = Lato-Italic.ttf, BoldItalicFont = Lato-BoldItalic.ttf]{Lato-Regular.ttf}
+
+% AUTHOR
+\usepackage{authblk} 
+\author[a]{Micha\l{} Wyrwa} 
+\affil[a]{Institute of Psychology, Adam Mickiewicz University in Pozna\'n} 
+
+% MAKETITLE
+\setlength{\affilsep}{0pt}
+\renewcommand\Affilfont{\itshape\small}
+
+\makeatletter
+\renewcommand{\maketitle}{\bgroup\setlength{\parindent}{0pt}
+\begin{flushleft}
+  {\huge\textbf{\@title}\par}
+
+  \@author
+\end{flushleft}\egroup
+}
+\let\AB@maketitle=\maketitle
+\def\maketitle{{\renewenvironment{tabular}[2][]{\begin{flushleft}}
+  {\end{flushleft}}
+  \AB@maketitle}}
+\makeatother
+\usepackage[round]{natbib}
+\bibliographystyle{spbasic}
+
+\title{Another Example in the Wall}
+\date{}
+
+\begin{document}
+\maketitle
+
+\hypertarget{abstract}{%
+\section{Abstract}\label{abstract}}
+
+Lorem ipsum dolor sit amet, \textbf{consectetur adipiscing elit}. Aenean
+pharetra condimentum leo \citep{barrett2015, siegel2015}, nec
+scelerisque risus ultrices et. Donec accumsan erat sed ligula elementum,
+in rhoncus felis tincidunt. Integer consequat enim lacinia massa
+lacinia, vitae ornare leo gravida. Nulla in purus dui. Aliquam dignissim
+feugiat justo, non \emph{sollicitudin justo condimentum eget}. Nam
+cursus ante sit amet leo bibendum blandit. Sed aliquam ornare ex eu
+mollis. \# Introduction \# Cras tempor id purus vitae consectetur.
+Suspendisse luctus leo urna, nec condimentum leo aliquet vitae.
+Curabitur venenatis sem risus, sit amet efficitur leo laoreet sed.
+
+\hypertarget{methods}{%
+\section{Methods}\label{methods}}
+
+Nulla eget orci id mauris blandit cursus vitae id diam. Mauris in ex
+condimentum, euismod felis a, vehicula libero. In placerat finibus nunc,
+eu rhoncus velit viverra eget ac turpis egestas. Suspendisse porta, nunc
+et egestas euismod, orci arcu eleifend ante, vel sodales leo dolor
+mollis purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Integer iaculis congue eros, eget eleifend sapien dictum at. Nam diam
+nulla, mattis eu enim in, porta volutpat quam. Curabitur aliquet
+vestibulum molestie.
+
+\hypertarget{results}{%
+\section{Results}\label{results}}
+
+Nam egestas aliquet porttitor. Fusce vitae dolor libero. Quisque vitae
+est ultricies, dictum ex at, dictum lorem. Cras id felis sit amet orci
+dictum convallis. Nunc efficitur ante sed augue blandit molestie.
+Maecenas quis dui lectus. Pellentesque sit amet nisl laoreet, varius
+enim a, iaculis diam. Fusce bibendum dolor orci, sit amet ullamcorper
+felis luctus vitae. Mauris sit amet venenatis tellus. Duis condimentum
+sapien luctus, hendrerit quam ut, lobortis dolor. Fusce id sollicitudin
+ligula. Maecenas finibus orci ut lorem eleifend lacinia. Praesent at
+nulla vel quam eleifend ullamcorper ut sodales mi.
+
+\begin{longtable}[]{@{}ccc@{}}
+\toprule
+\textbf{Table Head 1} & \textbf{Table Head 2} & \textbf{Table Head
+3}\tabularnewline
+\midrule
+\endhead
+Item 1 & Item 2 & Item 3\tabularnewline
+Item 4 & Item 5 & Item 6\tabularnewline
+\bottomrule
+\end{longtable}
+
+\[x^{\alpha} e^{\beta x^{\gamma} e^{\delta x^{\epsilon}}}\]
+
+\hypertarget{discussion}{%
+\section{Discussion}\label{discussion}}
+
+Nam egestas aliquet porttitor. Fusce vitae dolor libero. Quisque vitae
+est ultricies, dictum ex at, dictum lorem. Cras id felis sit amet orci
+dictum convallis. Nunc efficitur ante sed augue blandit molestie.
+Maecenas quis dui lectus. Pellentesque sit amet nisl laoreet, varius
+enim a, iaculis diam. Fusce bibendum dolor orci, sit amet ullamcorper
+felis luctus vitae. Mauris sit amet venenatis tellus. Duis condimentum
+sapien luctus, hendrerit quam ut, lobortis dolor. Fusce id sollicitudin
+ligula. Maecenas finibus orci ut lorem eleifend lacinia. Praesent at
+nulla vel quam eleifend ullamcorper ut sodales mi.
+
+\renewcommand\refname{References}
+  \bibliography{bibliography.bib}
+
+\end{document}
